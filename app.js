@@ -5,13 +5,17 @@ function pesquisar(){
     let titulo = "";
     let descricao = "";
 
-
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
+
+    if(!campoPesquisa){
+        pesquisa.innerHTML = "<h2>Por favor, escreva a mitologia que deseja conhecer!</h2>"
+        return
+    }
+
+    
 
     campoPesquisa = campoPesquisa.toLowerCase()
 
-    
-    
 
 for (let p of mitologias){
     titulo = p.titulo.toLowerCase()
@@ -33,16 +37,10 @@ for (let p of mitologias){
          </div>
     `
     }
-    if(!campoPesquisa){
-        pesquisa.innerHTML = "<h2>Por favor, escreva a mitologia que deseja conhecer!</h2>"
-        return
-    }
-   
     
 }
 if(!resultados){
     resultados = "<h2>Mitologia não encontrada!</h2>"
-    return
 }
 
 pesquisa.innerHTML = resultados
