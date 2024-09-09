@@ -37,12 +37,12 @@ for (let p of mitologias){
         pesquisa.innerHTML = "<h2>Por favor, escreva a mitologia que deseja conhecer!</h2>"
         return
     }
-    if(!resultados){
-        pesquisa.innerHTML = "<h2>Mitologia não encontrada!</h2>"
-        return
-    }
+   
     
-    
+}
+if(!resultados){
+    resultados = "<h2>Mitologia não encontrada!</h2>"
+    return
 }
 
 pesquisa.innerHTML = resultados
